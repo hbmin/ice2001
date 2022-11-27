@@ -1,0 +1,77 @@
+# do hw6v.do
+# DO: Creating project hw6v_project at working directory
+# Loading project hw6v_project
+# DO: Adding two Verilog code files to the project
+# DO: Compiling hw6.v
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 09:25:22 on Nov 25,2022
+# vlog hw6.v 
+# -- Compiling module e74FSM
+# -- Compiling module COUNTER3
+# -- Compiling module BIN2SEG
+# 
+# Top level modules:
+# 	e74FSM
+# End time: 09:25:22 on Nov 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# DO: Compiling hw6tb.v
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 09:25:22 on Nov 25,2022
+# vlog hw6tb.v 
+# -- Compiling module hw6tb
+# 
+# Top level modules:
+# 	hw6tb
+# End time: 09:25:22 on Nov 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# DO: Preparing simulation : Elaboration
+# vsim work.hw6tb -voptargs="+acc" 
+# Start time: 09:25:22 on Nov 25,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "COUNTER3(fast)".
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.hw6tb(fast)
+# Loading work.e74FSM(fast)
+# Loading work.COUNTER3(fast)
+# Loading work.BIN2SEG(fast)
+# DO: Preparing simulation : Add objects for waveform data collection
+# DO: Simulation run begins
+# Check if RESET works at time 10 ns.
+# Yep, RESET works.
+# Check if counter state is still 0 after RESET has been released at 30 ns.
+# Yep, counter state is still 0 since CE = 1'b0.
+# Now, CE = 1'b1 at 30 ns.
+# Checking LED outputs at every falling edge of CLK.
+# 35 ns: The 1st rising edge of CLK after CE becomes 1'b1.
+# 40 ns: LED output = 3 at falling edge of CLK.
+# 50 ns: LED output = 2 at falling edge of CLK.
+# 60 ns: LED output = 1 at falling edge of CLK.
+# 70 ns: LED output = 4 at falling edge of CLK.
+# 80 ns: LED output = 5 at falling edge of CLK.
+# 90 ns: LED output = 6 at falling edge of CLK.
+# 100 ns: LED output = 7 at falling edge of CLK.
+# 110 ns: LED output = 3 at falling edge of CLK.
+# 120 ns: LED output = 2 at falling edge of CLK.
+# 130 ns: LED output = 1 at falling edge of CLK.
+# 140 ns: LED output = 4 at falling edge of CLK.
+# 150 ns: LED output = 5 at falling edge of CLK.
+# 160 ns: LED output = 6 at falling edge of CLK.
+# 170 ns: LED output = 7 at falling edge of CLK.
+# 180 ns: LED output = 3 at falling edge of CLK.
+# 190 ns: LED output = 2 at falling edge of CLK.
+# 200 ns: LED output = 1 at falling edge of CLK.
+# End time: 09:25:22 on Nov 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4

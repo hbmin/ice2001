@@ -1,0 +1,61 @@
+# do hw6v.do
+# DO: Creating project hw6v_project at working directory
+# Loading project hw6v_project
+# DO: Adding two Verilog code files to the project
+# DO: Compiling hw6.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:10:15 on Nov 25,2022
+# vlog hw6.v 
+# -- Compiling module e74FSM
+# -- Compiling module COUNTER3
+# -- Compiling module BIN2SEG
+# 
+# Top level modules:
+# 	e74FSM
+# End time: 09:10:15 on Nov 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# DO: Compiling hw6tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:10:15 on Nov 25,2022
+# vlog hw6tb.v 
+# -- Compiling module hw6tb
+# 
+# Top level modules:
+# 	hw6tb
+# End time: 09:10:15 on Nov 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# DO: Preparing simulation : Elaboration
+# vsim work.hw6tb 
+# Start time: 09:10:16 on Nov 25,2022
+# Loading work.hw6tb
+# Loading work.e74FSM
+# Loading work.COUNTER3
+# Loading work.BIN2SEG
+# DO: Preparing simulation : Add objects for waveform data collection
+# DO: Simulation run begins
+# Check if RESET works at time 10 ns.
+# Yep, RESET works.
+# Check if counter state is still 0 after RESET has been released at 30 ns.
+# Yep, counter state is still 0 since CE = 1'b0.
+# Now, CE = 1'b1 at 30 ns.
+# Checking LED outputs at every falling edge of CLK.
+# 35 ns: The 1st rising edge of CLK after CE becomes 1'b1.
+# 40 ns: LED output = 3 at falling edge of CLK.
+# 50 ns: LED output = 2 at falling edge of CLK.
+# 60 ns: LED output = 1 at falling edge of CLK.
+# 70 ns: LED output = 4 at falling edge of CLK.
+# 80 ns: LED output = 5 at falling edge of CLK.
+# 90 ns: LED output = 6 at falling edge of CLK.
+# 100 ns: LED output = 7 at falling edge of CLK.
+# 110 ns: LED output = 3 at falling edge of CLK.
+# 120 ns: LED output = 2 at falling edge of CLK.
+# 130 ns: LED output = 1 at falling edge of CLK.
+# 140 ns: LED output = 4 at falling edge of CLK.
+# 150 ns: LED output = 5 at falling edge of CLK.
+# 160 ns: LED output = 6 at falling edge of CLK.
+# 170 ns: LED output = 7 at falling edge of CLK.
+# 180 ns: LED output = 3 at falling edge of CLK.
+# 190 ns: LED output = 2 at falling edge of CLK.
+# 200 ns: LED output = 1 at falling edge of CLK.
+# End time: 09:10:16 on Nov 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4

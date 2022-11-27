@@ -1,0 +1,68 @@
+# do hw6vhd.do
+# DO: Creating project hw6vhd_project at working directory
+# Loading project hw6vhd_project
+# DO: Adding two Verilog code files to the project
+# DO: Compiling hw6.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:19:23 on Nov 25,2022
+# vcom hw6.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity e74FSM
+# -- Compiling architecture e74FSM_arch of e74FSM
+# -- Compiling entity COUNTER3
+# -- Compiling architecture COUNTER3_beh of COUNTER3
+# -- Compiling entity BIN2SEG
+# -- Compiling architecture BIN2SEG_beh of BIN2SEG
+# End time: 09:19:23 on Nov 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# DO: Compiling hw6tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:19:23 on Nov 25,2022
+# vcom hw6tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hw6tb
+# -- Compiling architecture hw6tb_arch of hw6tb
+# End time: 09:19:24 on Nov 25,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# DO: Preparing simulation : Elaboration
+# vsim work.hw6tb 
+# Start time: 09:19:24 on Nov 25,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.hw6tb(hw6tb_arch)
+# Loading work.e74fsm(e74fsm_arch)
+# Loading work.counter3(counter3_beh)
+# Loading work.bin2seg(bin2seg_beh)
+# DO: Preparing simulation : Add objects for waveform data collection
+# DO: Simulation run begins
+# Check if RESET works at 10 ns
+# Yep, RESET works.
+# Check if counter state is still 0 after RESET has been released at 30 ns
+# Yep, counter state is still 0 after RESET since CE = '0'.
+# Now, CE = '1' at 30 ns
+# We'll check counter states at every falling edge of clock.
+# The 1st rising edge of CLK after CE becomes '1' at 35 ns
+# LED value = 3 at falling edge of CLK at 40 ns
+# LED value = 2 at falling edge of CLK at 50 ns
+# LED value = 1 at falling edge of CLK at 60 ns
+# LED value = 4 at falling edge of CLK at 70 ns
+# LED value = 5 at falling edge of CLK at 80 ns
+# LED value = 6 at falling edge of CLK at 90 ns
+# LED value = 7 at falling edge of CLK at 100 ns
+# LED value = 3 at falling edge of CLK at 110 ns
+# LED value = 2 at falling edge of CLK at 120 ns
+# LED value = 1 at falling edge of CLK at 130 ns
+# LED value = 4 at falling edge of CLK at 140 ns
+# LED value = 5 at falling edge of CLK at 150 ns
+# LED value = 6 at falling edge of CLK at 160 ns
+# LED value = 7 at falling edge of CLK at 170 ns
+# LED value = 3 at falling edge of CLK at 180 ns
+# LED value = 2 at falling edge of CLK at 190 ns
+# LED value = 1 at falling edge of CLK at 200 ns
+# End time: 09:19:24 on Nov 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4

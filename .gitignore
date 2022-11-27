@@ -1,0 +1,5 @@
+### .gitignore for ice2001 ###
+HOWTO
+LATEST
+upload.sh
+clean.sh
