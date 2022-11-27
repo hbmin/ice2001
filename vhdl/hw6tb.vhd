@@ -63,7 +63,6 @@ architecture hw6tb_arch of hw6tb is
     -- Function for conversion from std_logic to character
     -------------
     function to_str ( inval : std_logic ) return character is
-        variable outval : character;
     begin
         return std_logic'image(inval)(2);
     end;

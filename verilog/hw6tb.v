@@ -70,10 +70,11 @@ e74FSM U1 (.RESET(RESET), .CLK(CLK), .CE(CE),
            .a(a), .b(b), .c(c), .d(d), .e(e), .f(f), .g(g));
 
 // This is a clock generator of 100 MHz when CLOCK_PERIOD=10
-always
+initial
 begin : CLOCK_GENERATOR
-     # HALF_CLOCK_PERIOD CLK = 1'b1;
-     # HALF_CLOCK_PERIOD CLK = 1'b0;
+    CLK = 1'b0;
+    forever
+        # HALF_CLOCK_PERIOD CLK = ~CLK;
 end
 
 // LED output from circuit and expected LED output value
@@ -121,15 +122,14 @@ begin : TEST_PROGRAM
     end
 
     // Set initial values of inputs to e74FSM:
-    // Set initial value of CLK, disable CE, and enable RESET.
-    CLK = 1'b0;
+    // Disable CE, and enable RESET.
     CE = 1'b0;
     RESET = 1'b1;
     expected = 0;
-    # CLOCK_PERIOD;
 
     // Check if initial state of counter is 0.
     // Note that $time is system task which represents current simulation time.
+    # CLOCK_PERIOD;
     $display("Check if RESET works at time %0t.", $time);
     if (segout === expected) begin
         $display("Yep, RESET works.");

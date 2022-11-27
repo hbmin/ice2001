@@ -11,11 +11,13 @@ VHDL Files in "vhdl" folder
   이 파일을 synthesis software에 입력으로 넣으면, gate-level 회로
   혹은 FPGA 회로를 만들어 줍니다.  
   &nbsp; &nbsp; 이 파일은 synthesis를 통하여 IC로 만들 회로를 나타내는 것이므로,
-  VHDL 문장들 중에서 어느 것은 synthesis 가능하고 어느 것은 불가능한지
-  알고 있어야 합니다. 즉, VHDL의 모든 문장이 synthesis 가능한 것이 아니며,
+  synthesizable VHDL code로 쓰여야 합니다. 따라서, VHDL 문장들 중에서
+  어느 것은 synthesis 가능하고 어느 것은 불가능한지 알고 있어야 합니다.
+  즉, VHDL의 모든 문장이 synthesis 가능한 것이 아니며,
   VHDL simulation을 통과하였다고 하여, 모두 syynthesis 가능한 것이 아닙니다.
-  우리 과목에서는 강의 시간의 제약으로 인하여 이 주제를 다루지 못하지만,
-  VHDL을 제대로 공부할 기회가 다시 온다면, 이 주제를 신경 써서 공부하세요.
+  우리 과목에서는 강의 시간의 제약으로 인하여 이 주제를 제한적으로 다룰 수
+  밖에 없었지만, VHDL을 공부할 기회가 다시 온다면, 이 주제를 신경 써서
+  공부하세요.
 * **[hw6tb.vhd](https://github.com/hbmin/ice2001/blob/master/vhdl/hw6tb.vhd)**  
   &nbsp; &nbsp; 이 파일은 hw6.vhd의 설계 오류를 잡을 목적으로 만든
   **VHDL testbench** 파일입니다.
@@ -23,7 +25,8 @@ VHDL Files in "vhdl" folder
   hw6.vhd가 올바로 작성되었는지 점검합니다.
   hw6.vhd에 들어 있는 e74FSM의 입력에 논리값들을 인가하여
   simulation을 수행하는 program이 이 파일에 들어 있고,
-  e74FSM이 주는 출력을 컴퓨터 화면에 보여주는 일을 합니다.  
+  e74FSM의 출력 논리값이 기대한 논리값과 다르면 error message를 컴퓨터 화면에
+  보여주는 일을 합니다.  
   &nbsp; &nbsp; 이 파일에 들어 있는 VHDL program은 hw6.vhd에 들어 있는 설계물을
   시험하기 위한 것일 뿐, IC로 만들 design이 아니므로 별도의 파일로 작성하고,
   hw6.vhd만 synthesis의 대상이 되도록 분리합니다.
@@ -41,13 +44,15 @@ VHDL Files in "vhdl" folder
   &nbsp; &nbsp; &nbsp; text-shell-prompt> **vsim -c -do hw6vhd.do**  
   이 파일 안에 주어진 simulation command마다 바로 위의 echo 명령에서
   무었을 하는 것인지 설명하고 있어서 따로 comment를 붙이지 않았습니다.
-  물론, echo 명령은 주어진 문장을 simulator 출력 화면에 보여주는 일을 합니다.
+  물론, echo 명령은 argument로 주어진 문장을 simulator 출력 화면에 보여주는
+  일을 합니다. 또한, 그 문장들이 hw6vhd.do 파일의 echo 명령에서 나온 것이라는
+  것을 쉽게 알 수 있도록 하기 위하여, 모든 문장을 "DO:"로 시작하였습니다.
   이 파일은 Questa와 Modelsim에서 똑같이 사용할 수 있습니다.
 * **[vhdl-questasim-results.txt](https://github.com/hbmin/ice2001/blob/master/vhdl/vhdl-questasim-results.txt)**  
   &nbsp; &nbsp; 위 3개의 파일을 다운로드 받아서 하나의 folder에 넣고,
   위 vsim command를 사용해서 **VHDL simulation을 수행한 결과**
   (computer screen에 나온 결과)를 보여 줍니다.
-  VHDL simulator로는 Mentor Graphics (now, Siemens EDA)가 개발하고 Intel이
+  VHDL simulator로는 Siemens EDA (aka Mentor Graphics)가 개발하고 Intel이
   배포하는 Questa - Intel FPGA Starter Edition, version 2021.2를
   사용하였습니다.  
   &nbsp; &nbsp; <b>[vhdl-modelsim-results.txt](https://github.com/hbmin/ice2001/blob/master/vhdl/vhdl-modelsim-results.txt)</b>는
@@ -74,11 +79,12 @@ VHDL Files in "vhdl" folder
   CLB (Configurable Logic Block)과 flip-flop 들이니
   그림에는 이 2가지만 보입니다. 그림에서 초록색 4각형들이 flip-flop들이고,
   파란색 4각형들이 CLB들입니다.
-  이러한 synthesis 중에 synthesis software가 준 report와 message들을 보이는
+  이러한 synthesis를 수행하면서, synthesis software는 이 software가 주는
+  message들과 report의 기록을 담고 있는 파일을 생성합니다.
   <b>[HW6.map.rpt](https://github.com/hbmin/ice2001/blob/master/vhdl/HW6.map.rpt)</b>
-  파일을 보이니 참고하세요.
+  파일이 그 기록 파일이니 참고하세요.
   FPGA synthesis에 사용한 software는
-  [상위 폴더의 README.md](https://github.com/hbmin/ice2001#readme)에
+  [상위 폴더의 README.md](https://github.com/hbmin/ice2001#readme)에서
   자세하게 언급한 Intel Quartus Prime Lite Edition, version 2020.1.1 입니다.
   Synthesis에 사용한 FPGA device family는 "Arria II GX"이며, 그 중에서
   사용한 device는 "EP2AGX45CU17C4"입니다.

@@ -11,7 +11,7 @@
 #
     echo DO: Creating project hw6vhd_project at working directory
 project new . hw6vhd_project
-    echo DO: Adding two Verilog code files to the project
+    echo DO: Adding two VHDL code files to the project
 project addfile hw6.vhd
 project addfile hw6tb.vhd
     echo DO: Compiling hw6.vhd

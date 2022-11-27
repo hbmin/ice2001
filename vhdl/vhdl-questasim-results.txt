@@ -1,7 +1,7 @@
 # do hw6vhd.do
 # DO: Creating project hw6vhd_project at working directory
 # Loading project hw6vhd_project
-# DO: Adding two Verilog code files to the project
+# DO: Adding two VHDL code files to the project
 # DO: Compiling hw6.vhd
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
 # Start time: 09:29:08 on Nov 25,2022

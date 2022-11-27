@@ -27,6 +27,13 @@ design project 등 우리 수업에서 주어진 회로들을 대상으로 desig
 testbench 등을 스스로 만들어서 simulation과 synthesis를 해 보시길
 권장 드립니다.**
 
+🔴
+&nbsp;**TIP**: GitHub의 글에서 사용되는 web link들을 클릭하면,
+자동으로 새로운 페이지에서 web link가 열리도록 만드는 것이,
+GitHub의 정책으로 인하여 불가능합니다.
+Web link를 새로운 페이지에서 열고 싶으면, Control key를 누른채 그 web link를
+클릭 (Ctrl+click) 하세요.
+
 HDL Simulators and Synthesis Softwares for FPGA
 ===============================================
 
@@ -99,7 +106,7 @@ Quartus Prime은 물론, Questa와 Devices를 포함한 모든 것을 알아서 
 [마지막 dialog box](https://github.com/hbmin/ice2001/blob/master/questa/final_screen_install.png?raw=true)에서
 [이 그림](https://github.com/hbmin/ice2001/blob/master/questa/final_screen_install.png?raw=true)처럼
 선택하길 권장합니다. 여기에서 어떤 선택을 하던 상관없지만,
-아마도 가장 편안한 방법일 것입니다.
+위 그림에서 보인 선택이 아마도 가장 편안한 방법일 것입니다.
 * <b>Questa의 Verilog simulator에
 [optimization 관련 issue](https://3omh4.tistory.com/entry/verilog-modelsim-vish-4014-No-objects-found-matching-Testbench)</b>가 있어서,
 사용하기 조금 불편합니다. 이 issue를 회피하는 방법을
@@ -108,8 +115,8 @@ Quartus Prime은 물론, Questa와 Devices를 포함한 모든 것을 알아서 
 관련하여 어떤 현상이 나타나는지에 대한 설명 만을 살펴 보고,
 그 페이지에서 제시한 -novopt를 사용하는 해법은 무시하세요.
 이 해법은 Questa의 개발사에서 -novopt option을 없앨 예정이니 사용하지 말라고
-경고하는 방법이며, hw6v.do에 써놓은 +acc를 사용하는 방법이 Questa 개발사가
-권장하는 방법입니다.
+경고하는 방법이며, hw6v.do의 line 31 ~ 37에 써놓은 +acc를 사용하는 방법이
+Questa 개발사가 권장하는 방법입니다.
 * 위 paragraph에서 언급한 issue를 원천적으로 피하고 싶다면,
 [Windows 사용자 Quartus Prime download page](https://www.intel.com/content/www/us/en/software-kit/757262/intel-quartus-prime-lite-edition-design-software-version-22-1-for-windows.html)의
 상단에서 최신 버젼인 22.1 대신에 과거 버젼 (20.1.1)을 선택하여 다운로드 받아서

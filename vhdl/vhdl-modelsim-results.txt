@@ -1,7 +1,7 @@
 # do hw6vhd.do
 # DO: Creating project hw6vhd_project at working directory
 # Loading project hw6vhd_project
-# DO: Adding two Verilog code files to the project
+# DO: Adding two VHDL code files to the project
 # DO: Compiling hw6.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:19:23 on Nov 25,2022
