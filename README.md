@@ -61,15 +61,16 @@ FPGA를 공급하는 양대 회사인 Xilinx와 Intel이 모두 기능이 제한
 이 페이지의 software는 Windows 사용자를 위한 것입니다.
 [GNU/Linux 사용자는 여기](https://www.intel.com/content/www/us/en/software-kit/757261/intel-quartus-prime-lite-edition-design-software-version-22-1-for-linux.html)에서
 다운로드 받을 수 있습니다.
-2021년까지는 VHDL과 Verilog simulator로 **Modelsim**을 Lite Edition software
-package의 일부로서 넣어 놓았었는데, 올해는 **Questa**를 넣어 놓았네요.
+2021년까지는 VHDL과 Verilog simulator로 **Modelsim**을 Quartus Prime Lite
+Edition Design Software package의 일부로서 넣어 놓았었는데,
+올해는 **Questa**를 넣어 놓았네요.
 Questa는 사용법이 Modelsim과 매우 유사해서, 지금 보고 있는 이 repository의
 "verilog" folder에 주어진 "hw6v.do"와 "vhdl" folder에 주어진 "hw6vhd.do"를
 사용하는데 문제가 없을 것으로 기대됩니다. 이 2개의 file들은 simulation
 과정을 기술하여 자동화하는데 사용하는 script file들입니다.
 위에 링크된 다운로드 페이지에서는 다운로드 받는 파일이 1개이고 그 크기가
-6 GB 내외인데, 학생의 사용 목적에 따라, 이 6 GB 파일을 분리해서
-필요한 것들만 다운로드 받음으로써, 다운로드 크기를 줄일 수 있습니다.
+6 GB 내외인데, <b>학생의 사용 목적에 따라, 이 6 GB 파일을 분리해서
+필요한 것들만 다운로드 받음으로써, 다운로드 크기를 줄일 수 있습니다.</b>
 
 * 위에서 link한 Windows 사용자를 위한 Quartus Prime download page를 아래쪽으로
 조금 내려가 보면 (scroll down하면), "Multiple Download", "Individual Files"라는
